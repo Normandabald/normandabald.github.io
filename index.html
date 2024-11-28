@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Threat Modeling Quick Reference Guide</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-50">
+    <div class="max-w-4xl mx-auto p-6">
+      <header class="text-center mb-12 mt-8">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">
+          Threat Modeling Quick Reference Guide
+        </h1>
+        <p class="text-lg text-gray-600">
+          A practical guide to getting started with threat modeling at BigBox
+          Co.
+        </p>
+      </header>
+
+      <main>
+        <section class="mb-12 bg-white rounded-lg shadow-md p-6">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">
+            The Four Key Questions
+          </h2>
+
+          <div class="space-y-8">
+            <div class="bg-blue-50 p-6 rounded-lg">
+              <h3 class="text-xl font-semibold text-blue-800 mb-3">
+                1. What are we trying to protect? (Assets)
+              </h3>
+              <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                <li>Customer data</li>
+                <li>Financial information</li>
+                <li>Intellectual property</li>
+                <li>Business operations</li>
+                <li>Staff information</li>
+                <li>System access</li>
+              </ul>
+            </div>
+
+            <div class="bg-green-50 p-6 rounded-lg">
+              <h3 class="text-xl font-semibold text-green-800 mb-3">
+                2. Who might want it? (Threat Actors)
+              </h3>
+              <div class="space-y-4">
+                <div>
+                  <h4 class="font-semibold">Script Kiddies</h4>
+                  <p class="text-gray-700">
+                    Low capability, motivated by curiosity/bragging rights. Uses
+                    pre-built tools.
+                  </p>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Hacktivists</h4>
+                  <p class="text-gray-700">
+                    Medium capability, motivated by causes. Wants to make
+                    statements.
+                  </p>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Cyber Criminals</h4>
+                  <p class="text-gray-700">
+                    High capability, motivated by money. Systematic and
+                    persistent.
+                  </p>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Cyber Terrorists</h4>
+                  <p class="text-gray-700">
+                    High capability, motivated by ideology. Want to spread fear,
+                    uncertainty and doubt
+                  </p>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Insider Threats</h4>
+                  <p class="text-gray-700">
+                    High access, various motivations. Could be malicious or
+                    accidental.
+                  </p>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Nation States</h4>
+                  <p class="text-gray-700">
+                    Highest capability, political motives. Sophisticated and
+                    well-resourced.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-purple-50 p-6 rounded-lg">
+              <h3 class="text-xl font-semibold text-purple-800 mb-3">
+                3. How might they try to get it? (Attack Methods)
+              </h3>
+              <div class="space-y-4">
+                <div>
+                  <h4 class="font-semibold">Social Engineering</h4>
+                  <ul class="list-disc pl-6 text-gray-700">
+                    <li>Phishing</li>
+                    <li>Impersonation</li>
+                    <li>Social media research</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Technical Attacks</h4>
+                  <ul class="list-disc pl-6 text-gray-700">
+                    <li>Exploiting vulnerabilities</li>
+                    <li>Password attacks</li>
+                    <li>Malware</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Physical Access</h4>
+                  <ul class="list-disc pl-6 text-gray-700">
+                    <li>Unauthorised entry</li>
+                    <li>Device theft</li>
+                    <li>Dumpster diving</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-red-50 p-6 rounded-lg">
+              <h3 class="text-xl font-semibold text-red-800 mb-3">
+                4. What would happen if they succeeded? (Impact)
+              </h3>
+              <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                <li>Financial loss</li>
+                <li>Reputational damage</li>
+                <li>Operational disruption</li>
+                <li>Legal/regulatory consequences</li>
+                <li>Customer harm</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-12 bg-white rounded-lg shadow-md p-6">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">Getting Started</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="text-xl font-semibold mb-3">1. Pick One Asset</h3>
+              <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                <li>Start small</li>
+                <li>Choose something important</li>
+                <li>Consider dependencies</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-3">2. Ask These Questions</h3>
+              <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                <li>Where is it stored?</li>
+                <li>Who has access?</li>
+                <li>How is it protected?</li>
+                <li>What protections exist?</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-12 bg-white rounded-lg shadow-md p-6">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">
+            Common Attack Paths to Consider
+          </h2>
+          <ul class="list-disc pl-6 grid md:grid-cols-2 gap-4 text-gray-700">
+            <li>Compromised credentials</li>
+            <li>Unpatched systems</li>
+            <li>Misconfigured access</li>
+            <li>Third-party vulnerabilities</li>
+            <li>Human error</li>
+            <li>Physical access</li>
+            <li>Social engineering</li>
+          </ul>
+        </section>
+
+        <section class="mb-12 bg-white rounded-lg shadow-md p-6">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">Quick Tips</h2>
+          <ul class="list-disc pl-6 space-y-2 text-gray-700">
+            <li>Think like an attacker</li>
+            <li>Consider both technical and non-technical threats</li>
+            <li>Document your findings</li>
+            <li>Start simple and build complexity</li>
+            <li>Focus on practical mitigations</li>
+          </ul>
+        </section>
+
+        <footer class="text-center text-gray-600 mt-12 pb-8">
+          <p></p>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
